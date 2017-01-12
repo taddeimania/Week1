@@ -1,13 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Day3
 {
+
+
     class Program
     {
+        static void holder()
+        {
+
+            string[] items = { "1", "2", "3", "4" };
+
+            // items[0] = "X";
+            int input = 0;
+
+            if (items[input] == "X" || items[input] == "O")
+            {
+                Console.WriteLine("INVALID");
+            }
+            // int number = int.Parse(items[0]);
+            int number;
+            bool validMove = int.TryParse(items[0], out number);
+            // number == 50
+            // x, y = method_call()
+            if (validMove)
+            {
+                // put move logic here
+            }
+            else
+            {
+                // put angry non move logic here
+            }
+        }
+
         static string AyStyle(string myString)
         {
             return $"{myString}ay";
@@ -46,7 +76,7 @@ namespace Day3
                 "_","_","_","_","_","_","_","_","_"
             };
 
-            while(true)
+            while (true)
             {
                 DrawBoard(board);
                 int location = int.Parse(Console.ReadLine());
